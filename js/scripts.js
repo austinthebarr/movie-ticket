@@ -21,20 +21,21 @@ Ticket.prototype.priceCheck = function()
 $(function(){
   $("#inputForm").submit(function(event){
     event.preventDefault();
-    //debugger;
+
     var inputtedTitle = $("#title").val();
     var inputtedTime = $("#time").val();
     var inputtedAge = $("#age").val();
-    //debugger;
-
 
     var newTicket = new Ticket(inputtedTitle, inputtedTime, inputtedAge)
-    console.log(newTicket);
+
     newTicket.priceCheck();
-    console.log(newTicket);
+
+    $(".output").show();
+
+    var priceString = newTicket.price.toLocaleString('en-US',{style: 'currency', currency: 'USD'});
     $(".title").text(newTicket.title);
     $(".time").text(newTicket.time);
-    $(".price").text(newTicket.price)
+    $(".price").text(priceString)
 
 
   });
