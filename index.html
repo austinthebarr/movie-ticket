@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title></title>
-  </head>
-    <body>
-      <div class="container">
-        <h1>Movie Tickets</h1>
-        <form id=inputForm>
-          <label for="title">Movie</label>
-          <select class="form-control form-control-lg">
-            <option>Die Hard: Orginal</option>
-            <option>Die Hard: 2</option>
-            <option>Die Hard: 15</option>
-          </select>
-          <label for="title">Time</label>
-          <select class="form-control form-control-lg">
-            <option>10am</option>
-            <option>2pm</option>
-            <option>8pm</option>
-          </select>
-          <label for="title">Age</label>
-          <select class="form-control form-control-lg">
-            <option>0-18yrs</option>
-            <option>18yrs+</option>
-            <option>75yrs+</option>
-          </select>
-          <button type="submit" class="btn btn-success">Find Your Price</button>
-        </form>
-      </div>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <h1>Movie Tickets</h1>
+    <form id=inputForm>
+      <label for="title">Movie</label>
+      <select class="form-control form-control-lg" id="title">
+        <option>Die Hard: Original</option>
+        <option>Die Hard: 2</option>
+        <option>Die Hard: 15</option>
+      </select>
+      <label for="time">Time</label>
+      <select class="form-control form-control-lg" id="time">
+        <option>10am</option>
+        <option>2pm</option>
+        <option>8pm</option>
+      </select>
+      <label for="age">Age</label>
+      <select class="form-control form-control-lg" id="age">
+        <option>0-18yrs</option>
+        <option>18yrs+</option>
+        <option>75yrs+</option>
+      </select><br>
+      <button type="submit" class="btn btn-success">Find Your Price</button>
+    </form>
+    <h1>Movie:</h1>
+    <div id=output>
+      <p>Title: <span class="title"></span></p>
+      <p>Time: <span class="time"></span></p>
+      <p>Price: <span class="price"></span></p>
+
+
+    </div>
+  </div>
+</body>
 </html>
